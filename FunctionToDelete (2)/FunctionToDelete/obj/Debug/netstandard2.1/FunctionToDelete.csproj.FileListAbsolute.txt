@@ -1,0 +1,5 @@
+D:\PROJECTS\FOD JUSTITIE\FunctionToDelete\FunctionToDelete (2)\FunctionToDelete\obj\Debug\netstandard2.1\FunctionToDelete.csproj.AssemblyReference.cache
+D:\PROJECTS\FOD JUSTITIE\FunctionToDelete\FunctionToDelete (2)\FunctionToDelete\obj\Debug\netstandard2.1\FunctionToDelete.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS\FOD JUSTITIE\FunctionToDelete\FunctionToDelete (2)\FunctionToDelete\obj\Debug\netstandard2.1\FunctionToDelete.AssemblyInfoInputs.cache
+D:\PROJECTS\FOD JUSTITIE\FunctionToDelete\FunctionToDelete (2)\FunctionToDelete\obj\Debug\netstandard2.1\FunctionToDelete.AssemblyInfo.cs
+D:\PROJECTS\FOD JUSTITIE\FunctionToDelete\FunctionToDelete (2)\FunctionToDelete\obj\Debug\netstandard2.1\FunctionToDelete.csproj.CoreCompileInputs.cache

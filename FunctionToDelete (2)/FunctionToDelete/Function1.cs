@@ -15,6 +15,7 @@ using System.ServiceModel.Channels;
 using System.ServiceModel.Security;
 using System.Text;
 using System.Threading.Tasks;
+using WcfCoreMtomEncoder;
 
 namespace FunctionToDelete
 {
@@ -85,8 +86,13 @@ namespace FunctionToDelete
             asbe.EnableUnsecuredResponse = true;
             asbe.AllowSerializedSigningTokenOnReply = true;
             // 2. WS-Addressing - Soap12 disables addressing from the WS binding. Addressing elements are included in the service reference
-            var msgEnc =
- new MtomMessageEncodingBindingElement(MessageVersion.Soap12, Encoding.UTF8);             // 3. transport HTTPS
+
+            var messageVersionSoap12 = new MtomMessageEncoderBindingElement(new TextMessageEncodingBindingElement
+            {
+                MessageVersion = MessageVersion.CreateVersion(EnvelopeVersion.Soap12, AddressingVersion.None),
+                WriteEncoding = Encoding.UTF8
+            });
+            var msgEnc = new MtomMessageEncoderBindingElement(messageVersionSoap12);             // 3. transport HTTPS
             var https = new HttpsTransportBindingElement
             {
                 KeepAliveEnabled = true,
