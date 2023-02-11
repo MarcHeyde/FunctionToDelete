@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<AzureFunctionsVersion>v1</AzureFunctionsVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Azure.Core" Version="1.25.0" />
+		<PackageReference Include="Azure.Identity" Version="1.8.2" />
+		<PackageReference Include="Azure.Security.KeyVault.Certificates" Version="4.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Primitives" Version="2.2.0" />
+		<PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="System.ServiceModel" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="host.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="local.settings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>Never</CopyToPublishDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<WCFMetadata Include="Connected Services" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Connected Services\" />
+	</ItemGroup>
+</Project>
